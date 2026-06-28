@@ -1,0 +1,31 @@
+# Store URLs, API endpoints, and file names# config.yaml
+project_name: "osteosarcoma_proteomics_ml"
+
+# Directory Structure (Python will use this to ensure folders exist)
+directories:
+  raw_data: "data/01_raw"
+  mapped_data: "data/02_mapped"
+  processed_data: "data/03_processed"
+  logs: "logs"
+
+# Primary Data Sources
+datasets:
+  pride_proteomics:
+    # SENT AN EMAIL REQUESTING PUBLIC RELEASE TO MASSIVE(UCSD)
+    project_accession: "PXD040681"
+    api_endpoint: "https://www.ebi.ac.uk/pride/ws/archive/v2/files/byProject"
+    target_extensions: [".txt", ".tsv", ".mzTab"] 
+    
+  zhang_chemoresponse:
+    source: "Frontiers in Oncology (2025)"
+    # Note: Replace with the static DOI link to the supplementary Excel file
+    supplementary_url: "https://www.frontiersin.org/articles/.../supplementary-material.xlsx" 
+    
+  lee_phospho_drug:
+    source: "Mol Cell Proteomics (2023)"
+    supplementary_url: "https://mcponline.org/cms/10.1016/j.mcpro.2023.../mmc1.xlsx"
+
+  depmap_broad:
+    source: "Cancer Dependency Map"
+    dataset_version: "24Q2" # Use the most recent release
+    drug_sensitivity_url: "https://depmap.org/portal/download/api/download?file=..."
