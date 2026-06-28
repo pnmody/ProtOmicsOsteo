@@ -29,10 +29,10 @@ datasets:
     doi: "10.1038/s44320-023-00004-7"
     files:
       # Drug response metrics(EV3). Total protein abundance(EV4). Phosphorylation state(EV5).
-      drug_response_ev3: "https://pmc.ncbi.nlm.nih.gov/articles/instance/10883282/bin/44320_2023_4_MOESM4_ESM.xlsx"
-      baseline_proteome_ev4: "https://pmc.ncbi.nlm.nih.gov/articles/instance/10883282/bin/44320_2023_4_MOESM5_ESM.xlsx"
+      local_path: "data/raw/"
+      local_path: "data/raw/"
       baseline_phospho_ev5: "https://pmc.ncbi.nlm.nih.gov/articles/instance/10883282/bin/44320_2023_4_MOESM6_ESM.xlsx"
 
   depmap_broad:
-    source: "Cancer Dependency Map"
-    local_path: "data/01_raw/GDSC2AUCMatrix.csv"
+    source: "https://depmap.org/portal/data_page/?tab=allData"
+    local_path: "data/raw/GDSC2AUCMatrix.csv"
